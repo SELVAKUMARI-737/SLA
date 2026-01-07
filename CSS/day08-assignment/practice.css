@@ -1,0 +1,48 @@
+/* first question */
+.fist{
+    line-height: 1.6;
+}
+#first-p{
+    background-color: antiquewhite;
+}
+.list{
+    color: rgb(0, 102, 255);
+}
+
+            /* second question */
+/* i)Use an element selector to */
+
+ul{
+    background-color: rgb(220, 245, 225);
+}
+
+/* ii)Set all <p> elements' font color to #555 and line-height to 1.6. */
+p.second{
+    color: #555;
+    line-height: 1.6;
+
+}
+ 
+/* iii) set the font style to italic */
+p.intro{
+    font-style: italic;
+}
+
+/*Use a class selector for .highlight to:*/
+.highlight {
+    background-color: #f0f8ff;
+    padding: 8px;
+}
+
+/*   Use an ID selector for #header to: */
+#header {
+    color: #2c3e50;
+    font-size: 32px;
+}
+/* Add any additional style to the .box class to: */
+.box {
+    border: 1px solid #ccc;
+    padding: 16px;
+}
+
+
