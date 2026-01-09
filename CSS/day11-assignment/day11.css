@@ -1,0 +1,101 @@
+/* first question */
+.page{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    width: 150px;
+    height: 150px;
+    color: rgb(255, 6, 6);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+/* Second Question */
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+    padding: 10px;
+    }
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+/* Third Question */
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background: #333;
+}
+.side-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+/* Fourth Question */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card button {
+    padding: 8px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Fifth Question */
+.bottom-align {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    border: 2px solid #000;
+}
+.box {
+    width: 100px;
+    margin: 10px;
+    background: tomato;
+}
+.small { height: 20px; }
+.medium { height: 100px; }
+.large { height: 150px; }
+
+
+/* Sixth question */
+
+.responsive {
+    display: flex;
+}
+.item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+@media (max-width: 600px) {
+    .responsive {
+        flex-direction: column;
+    }
+}
