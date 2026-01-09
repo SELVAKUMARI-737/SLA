@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container div {
+    width: 250px;
+    border: 2px solid #d009bc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.container p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
