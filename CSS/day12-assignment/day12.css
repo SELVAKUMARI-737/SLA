@@ -1,0 +1,90 @@
+/* first question */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* try flex-start, flex-end, space-between, space-around */
+  align-items: center;       /* vertical alignment magic */
+  background: #f2f2f2;
+}
+
+.box {
+  padding: 40px;
+  background: tomato;
+  color: white;
+  font-size: 20px;
+}
+
+/* second Question */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: black;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap; 
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.menu li:hover {
+  color: yellow;
+}
+/* Third Question */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 200px; 
+  background: #e3e3e3;
+  padding: 30px;
+  text-align: center;
+}
+/* Fourth Question */
+
+.pricing {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+}
+
+.plan {
+  flex: 1; 
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+/* Fifth Question */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 250px; 
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  flex: 1; 
+  padding: 20px;
+  background: #f4f4f4;
+}
+

@@ -1,0 +1,24 @@
+.center{
+    height: 20vh;
+    display: flex;
+    background-color: antiquewhite;
+    justify-content:center;
+    align-items: center;
+}
+.inner{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: blueviolet;
+    font-size: medium;
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(70, 69, 69);
+}
+.nav a{
+     color: azure;
+     text-decoration: none;
+     font-size: medium;
+}
