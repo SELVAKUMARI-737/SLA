@@ -1,0 +1,173 @@
+/* First Question */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px); 
+    gap: 15px; 
+    padding: 20px;
+}
+
+.box {
+    background-color: lightcoral;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Second Question  */
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr; 
+    grid-template-rows: 80px 1fr 60px;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #4a69bd;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 22px;
+}
+
+aside {
+    grid-area: sidebar;
+    background: #dcdde1;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    background: #f5f6fa;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background: #2f3640;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+.image{
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border:solid #2f3640;
+}
+
+/* Third Question */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #74b9ff;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+/* Fourth Question */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+.tall {
+    grid-row: span 2;
+}
+
+
+.wide {
+    grid-column: span 2;
+}
+/* Fifth Question */
+.dashboard {
+    display: grid;
+    grid-template-columns: 240px 1fr; /* 1st column = sidebar, 2nd column = content */
+    grid-template-rows: 70px 1fr;     /* 1st row = topbar, 2nd row = main content */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar on the LEFT, full height */
+.sidebar {
+    grid-column: 1;           /* place in first column */
+    grid-row: 1 / span 2;     /* span both rows */
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar p {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* Topbar at the top, next to sidebar */
+.topbar {
+    grid-column: 2;           /* second column */
+    grid-row: 1;              /* first row */
+    background: #3498db;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Main content under topbar */
+.content {
+    grid-column: 2;           /* second column */
+    grid-row: 2;              /* second row */
+    background: #ecf0f1;
+    padding: 20px;
+}
+
+/* Stats Grid inside main content */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Stat Card */
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
