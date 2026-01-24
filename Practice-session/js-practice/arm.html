@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>practice</title>
+</head>
+<body>
+
+<script>
+let arm = prompt("Enter a number");   
+let temp = arm;                       
+let sum = 0;
+
+while (temp > 0) {
+    let digit = temp % 10;            
+    sum = sum + digit * digit * digit;
+    temp = Math.floor(temp / 10);     
+}
+
+if (sum == arm) {
+    console.log("Armstrong Number");
+} else {
+    console.log("Not an Armstrong Number");
+}
+</script>
+
+</body>
+</html>

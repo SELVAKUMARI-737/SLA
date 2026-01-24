@@ -1,41 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="grid.css">
+<style>
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 60px auto 50px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: lightblue;
+  text-align: center;
+  padding: 15px;
+}
+
+aside {
+  grid-area: sidebar;
+  background: lightgreen;
+  padding: 20px;
+}
+
+main {
+  grid-area: main;
+  background: lightyellow;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background: lightcoral;
+  text-align: center;
+  padding: 10px;
+}
+</style>
 </head>
+
 <body>
-    <section>
-        <div class="container">
-            <div>apple</div>
-            <div>orange</div>
-            <div>mango</div>
-            <div>banana</div>
 
+<div class="container">
+  <header>Header</header>
+  <aside>Sidebar</aside>
+  <main>Main Content</main>
+  <footer>Footer</footer>
+</div>
 
-        </div>
-        <div class="container">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            
-
-        </div>
-    </section>
-    <section>
-        <div class="contain">
-            <div>A</div>
-            <div>B</div>
-            <div>C</div>
-            <div>D</div>
-            <div>E</div>
-            <div>F</div>
-        </div>
-    </section>
 </body>
 </html>
