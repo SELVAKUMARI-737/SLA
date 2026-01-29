@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url("back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    font-size:40px ;
+    font-weight: 700;
+    color: #ed5e1c;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    
+}
+nav a{
+   margin: 0 20px;
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+   font-size: larger;
+}
+.search-box{
+display: flex;
+}
+.search-box input{
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid rgb(228, 97, 9);
+    outline: none;
+    color: #ed5e1c;
+}
+.search-box button{
+    background-color: #ed5e1c;
+    color: #fffcfc;
+    padding: 6px 18px;
+}
+.search-box input::placeholder{
+    color: #fffcfc;
+    opacity: 2;
+}
+/* Hero section */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    color: white;
+}
+.hero-left{
+    width: 50%;
+}
+.hero-left h1{
+    font-size:45px ;
+    line-height: 1.2;
+}
+.hero-left h1 span{
+    color: #ed5e1c;
+}
+.hero-left p{
+    margin: 20px 0 ;
+    line-height: 1.6;
+}
+.join-btn{
+    background: #ed5e1c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* hero-right */
+.hero-right{
+    width:50%;
+    display: flex;
+    justify-content: center;
+}
+.login-box{
+    background-color:rgb(0, 0, 0);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid orangered;
+    width: 280px;
+    text-align: center;
+}
+.login-box h3{
+    background: white;
+    color: orangered;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.login-box input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid orangered;
+    color: white;
+}
+.login-box button{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    color:black;
+    border:none;
+    background-color: #ed5e1c;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.login-box span{
+    color: #ed5e1c;
+}
