@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 25 class and object</title>
+</head>
+<body>
+     <h3>Basic Class Tasks</h3>
+    <h3>Inheritance Tasks</h3>
+
+    <script>
+        //task 1
+        console.log("Task 1");
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log(`Hi, my name is ${this.name} and I am ${this.age} years old.`);
+            }
+        }
+
+        const person1 = new Person("Alex", 25);
+        person1.greet();
+
+
+        //task 2
+        console.log("Task 2");
+
+        class Student {
+            constructor(name, marks) {
+                this.name = name;
+                this.marks = marks;
+            }
+
+            getGrade() {
+                if (this.marks >= 90) return "A";
+                else if (this.marks >= 75) return "B";
+                else if (this.marks >= 50) return "C";
+                else return "Fail";
+            }
+        }
+
+        const student1 = new Student("John", 92);
+        const student2 = new Student("Emma", 68);
+
+        console.log(student1.name, "Grade:", student1.getGrade());
+        console.log(student2.name, "Grade:", student2.getGrade());
+
+
+        //task 3
+        console.log("Task 3");
+
+        class BankAccount {
+            constructor(accountHolder, balance) {
+                this.accountHolder = accountHolder;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                console.log(`Deposited: ${amount}`);
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficient balance");
+                } else {
+                    this.balance -= amount;
+                    console.log(`Withdrawn: ${amount}`);
+                }
+            }
+
+            checkBalance() {
+                console.log("Balance:", this.balance);
+            }
+        }
+
+        const account = new BankAccount("Alex", 1000);
+        account.deposit(500);
+        account.withdraw(300);
+        account.checkBalance();
+
+
+        //task 4
+        console.log("Task 4");
+
+        class Car {
+            constructor(brand, model) {
+                this.brand = brand;
+                this.model = model;
+                this.isAvailable = true;
+            }
+
+            rentCar() {
+                this.isAvailable = false;
+                console.log(`${this.brand} ${this.model} rented`);
+            }
+
+            returnCar() {
+                this.isAvailable = true;
+                console.log(`${this.brand} ${this.model} returned`);
+            }
+        }
+
+        const car1 = new Car("Toyota", "Innova");
+        const car2 = new Car("Honda", "City");
+
+        car1.rentCar();
+        car1.returnCar();
+        car2.rentCar();
+
+
+        // task 5
+        console.log("Task 5");
+
+        class ShoppingCart {
+            constructor() {
+                this.items = [];
+            }
+
+            addItem(item) {
+                this.items.push(item);
+                console.log(item.name, "added");
+            }
+
+            removeItem(itemName) {
+                this.items = this.items.filter(item => item.name !== itemName);
+                console.log(itemName, "removed");
+            }
+
+            getTotalPrice() {
+                let total = 0;
+                this.items.forEach(item => total += item.price);
+                console.log("Total Price:", total);
+            }
+        }
+
+        const cart = new ShoppingCart();
+        cart.addItem({ name: "Book", price: 200 });
+        cart.addItem({ name: "Pen", price: 50 });
+        cart.removeItem("Pen");
+        cart.getTotalPrice();
+
+
+        // 
+
+        //  Inheritance Task 1: Animal--> Dog 
+        console.log("Inheritance Task 1");
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log("Animal makes a sound");
+            }
+        }
+
+        class Dog extends Animal {
+            speak() {
+                console.log(`${this.name} says: Woof!`);
+            }
+        }
+
+        const dog = new Dog("Buddy");
+        dog.speak();
+
+
+        // Inheritance Task 2: Employee --> Manager 
+        console.log("Inheritance Task 2");
+
+        class Employee {
+            constructor(name, salary) {
+                this.name = name;
+                this.salary = salary;
+            }
+
+            getDetails() {
+                return `Name: ${this.name}, Salary: ${this.salary}`;
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(name, salary, department) {
+                super(name, salary);
+                this.department = department;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}, Department: ${this.department}`;
+            }
+        }
+
+        const manager = new Manager("Alice", 60000, "HR");
+        console.log(manager.getDetails());
+
+
+        //  Inheritance Task 3: Shape -->Rectangle 
+        console.log("Inheritance Task 3");
+
+        class Shape {
+            getArea() {
+                return 0;
+            }
+        }
+
+        class Rectangle extends Shape {
+            constructor(length, width) {
+                super();
+                this.length = length;
+                this.width = width;
+            }
+
+            getArea() {
+                return this.length * this.width;
+            }
+        }
+
+        const shape = new Shape();
+        const rectangle = new Rectangle(10, 5);
+
+        console.log("Shape Area:", shape.getArea());
+        console.log("Rectangle Area:", rectangle.getArea());
+
+
+        //Inheritance Task 4: Vehicle --> ElectricCar
+        console.log("Inheritance Task 4");
+
+        class Vehicle {
+            constructor(brand, speed) {
+                this.brand = brand;
+                this.speed = speed;
+            }
+
+            accelerate(value) {
+                this.speed += value;
+                console.log("Speed:", this.speed);
+            }
+        }
+
+        class ElectricCar extends Vehicle {
+            constructor(brand, speed, batteryLevel) {
+                super(brand, speed);
+                this.batteryLevel = batteryLevel;
+            }
+
+            chargeBattery() {
+                this.batteryLevel = 100;
+                console.log("Battery charged");
+            }
+        }
+
+        const eCar = new ElectricCar("Tesla", 60, 40);
+        eCar.accelerate(20);
+        eCar.chargeBattery();
+
+
+        //  Inheritance Task 5: User --> Admin
+        console.log("Inheritance Task 5");
+
+        class User {
+            constructor(username) {
+                this.username = username;
+            }
+
+            login() {
+                console.log(`${this.username} logged in`);
+            }
+        }
+
+        class Admin extends User {
+            login() {
+                console.log(`Admin ${this.username} logged in`);
+            }
+
+            deleteUser(username) {
+                console.log(`User ${username} deleted`);
+            }
+        }
+
+        const admin = new Admin("SuperAdmin");
+        admin.login();
+        admin.deleteUser("John");
+
+
+    </script>
+
+</body>
+</html>
