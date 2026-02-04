@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 24 - DOM Events</title>
+
+    <style>
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1 -->
+    <h3>Task 1: Click Event</h3>
+    <button id="clickBtn">Click Me</button>
+    <hr>
+
+    <!-- Task 2 -->
+    <h3>Task 2: Double Click Event</h3>
+    <p id="dblText">Double click this text</p>
+    <hr>
+
+    <!-- Task 3 & 4 -->
+    <h3>Task 3 & 4: Mouse Over and Mouse Out Event</h3>
+    <div id="hoverBox">Hover over this box</div>
+    <hr>
+
+    <!-- Task 5 -->
+    <h3>Task 5: Keydown Event</h3>
+    <input type="text" id="keyDownInput" placeholder="Type something">
+    <div id="keydownOutput"></div>
+    <hr>
+
+    <!-- Task 6 -->
+    <h3>Task 6: Keyup Event</h3>
+    <input type="text" id="keyUpInput" placeholder="Type and release key">
+    <div id="keyupOutput"></div>
+    <hr>
+
+    <!-- Task 7 -->
+    <h3>Task 7: Form Submit Event</h3>
+    <form id="userForm">
+        <input type="text" id="username" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formOutput"></div>
+    <hr>
+
+    <!-- Task 8 -->
+    <h3>Task 8: Change Event</h3>
+    <select id="colorSelect">
+        <option value="">Select color</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+    </select>
+    <hr>
+
+    <!-- Task 9 -->
+    <h3>Task 9: Focus & Blur Event</h3>
+    <input type="text" id="userInput" placeholder="Enter your name">
+    <hr>
+
+    <!-- Task 10 -->
+    <h3>Task 10: Event Delegation</h3>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+
+    <script>
+        /* Task 1: Click Event */
+        document.getElementById("clickBtn").addEventListener("click", function () {
+            alert("Button clicked!");
+        });
+
+        /* Task 2: Double Click Event */
+        document.getElementById("dblText").addEventListener("dblclick", function () {
+            this.textContent = "Text changed on double click";
+        });
+
+        /* Task 3: Mouse Over Event */
+        const hoverBox = document.getElementById("hoverBox");
+        hoverBox.addEventListener("mouseover", function () {
+            hoverBox.style.backgroundColor = "orange";
+        });
+
+        /* Task 4: Mouse Out Event */
+        hoverBox.addEventListener("mouseout", function () {
+            hoverBox.style.backgroundColor = "lightgray";
+        });
+
+        /* Task 5: Keydown Event */
+        document.getElementById("keyDownInput").addEventListener("keydown", function (event) {
+            document.getElementById("keydownOutput").textContent =
+                "Key pressed: " + event.key;
+        });
+
+        /* Task 6: Keyup Event */
+        document.getElementById("keyUpInput").addEventListener("keyup", function () {
+            document.getElementById("keyupOutput").textContent =
+                "Full value: " + this.value;
+        });
+
+        /* Task 7: Form Submit Event */
+        document.getElementById("userForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            let name = document.getElementById("username").value;
+            document.getElementById("formOutput").textContent =
+                "Submitted name: " + name;
+        });
+
+        /* Task 8: Change Event */
+        document.getElementById("colorSelect").addEventListener("change", function () {
+            document.body.style.backgroundColor = this.value;
+        });
+
+        /* Task 9: Focus & Blur Event */
+        const input = document.getElementById("userInput");
+
+        input.addEventListener("focus", function () {
+            input.style.border = "2px solid blue";
+        });
+
+        input.addEventListener("blur", function () {
+            input.style.border = "1px solid gray";
+        });
+
+        /* Task 10: Event Delegation */
+        document.getElementById("list").addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                alert("You clicked: " + event.target.textContent);
+            }
+        });
+    </script>
+
+</body>
+</html>
