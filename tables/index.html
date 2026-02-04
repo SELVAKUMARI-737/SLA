@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h2> What is an HTML Table?</h2>
+
+    <p>HTML table is used to display data in rows and columns
+(like marks list, timetable, bill, etc.)</p>
+
+<h4>example:</h4>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Mark</th>
+    </tr>
+    <tr>
+        <td>Ram</td>
+        <td>85</td>
+    </tr>
+</table>
+
+<p><b>border</b> Used to add a border around the table.</p>
+    <p><b>cellpadding</b> Adds space between the cell content and the cell border.</p>
+    <p><b>cellspacing</b> Adds space between table cells.</p>
+    <p><b>rowspan</b> Allows a table cell to span across multiple rows.</p>
+    <p><b>colspan</b> Allows a table cell to span across multiple columns.</p>
+
+    <hr>
+
+    <h2>CSS Properties for Tables</h2>
+
+    <p><b>border</b> Sets the border style for table or table cells.</p>
+    <p><b>padding</b> Adds inner spacing inside table cells.</p>
+    <p><b>text-align</b> Aligns text inside the table cells.</p>
+    <p><b>width</b> Controls the width of the table or columns.</p>
+    <p><b>border-collapse</b> Decides whether table borders are separated or merged.</p>
+
+
+<hr>
+<h2>Student Report</h2>
+
+<table border="1" cellpadding="10" cellspacing="5">
+    <caption><b>Student Marks Table</b></caption>
+
+    <tr>
+        <th rowspan="2">Roll No</th>
+        <th rowspan="2">Name</th>
+        <th colspan="2">Marks</th>
+    </tr>
+
+    <tr>
+        <th>Maths</th>
+        <th>Science</th>
+    </tr>
+
+    <tr>
+        <td>101</td>
+        <td>Arun</td>
+        <td>85</td>
+        <td>90</td>
+    </tr>
+
+    <tr>
+        <td>102</td>
+        <td>Bala</td>
+        <td>78</td>
+        <td>88</td>
+    </tr>
+</table>
+
+
+<style>
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f4a261;
+}
+</style>
+
+</body>
+</html>

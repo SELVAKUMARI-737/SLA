@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 23 - DOM Basics</title>
+
+    <style>
+        /* Basic styles */
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1 & 8: Change text content -->
+    <p id="para">This is normal text</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <hr>
+
+    <!-- Task 2: Change background color -->
+    <div id="box"></div>
+    <button onclick="changeBg()">Change Background Color</button>
+
+    <hr>
+
+    <!-- Task 3: Show / Hide element -->
+    <p id="hidePara">You can hide and show me</p>
+    <button onclick="hideText()">Hide</button>
+    <button onclick="showText()">Show</button>
+
+    <hr>
+
+    <!-- Task 4: Change image source -->
+    <img id="myImg" src="./tshirt.png">
+    <button onclick="changeImg()">Change Image</button>
+
+    <hr>
+
+    <!-- Task 5: Update input value -->
+    <input type="text" id="nameInput" placeholder="Enter text">
+    <button onclick="showInput()">Display Text</button>
+    <div id="output"></div>
+
+    <hr>
+
+    <!-- Task 6, 7 & 9 -->
+    <h3 id="heading">Heading Text</h3>
+    <button onclick="styleChange()">Change Style</button>
+
+    <script>
+        // Task 1 & 8: Change paragraph content
+        function changeText() {
+            document.getElementById("para").textContent =
+                "The text has been changed using DOM";
+        }
+
+        // Task 2: Change div background color
+        function changeBg() {
+            document.getElementById("box").style.backgroundColor = "orange";
+        }
+
+        // Task 3: Hide paragraph
+        function hideText() {
+            document.getElementById("hidePara").style.display = "none";
+        }
+
+        // Task 3: Show paragraph
+        function showText() {
+            document.getElementById("hidePara").style.display = "block";
+        }
+
+        // Task 4: Change image source
+        function changeImg() {
+            document.getElementById("myImg").src =
+                "./SQUID.jpg";
+        }
+
+        // Task 5: Display input value
+        function showInput() {
+            let value = document.getElementById("nameInput").value;
+            document.getElementById("output").textContent =
+                "You entered: " + value;
+        }
+
+        // Task 6, 7 & 9: Change text, color and font size
+        function styleChange() {
+            let head = document.getElementById("heading");
+            head.textContent = "DOM Manipulation Completed";
+            head.style.color = "purple";
+            head.style.fontSize = "30px";
+            head.style.fontFamily = "Arial";
+        }
+    </script>
+
+</body>
+</html>
