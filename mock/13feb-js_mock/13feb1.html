@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>9)get the stock price</h3>
+<ul id="list"></ul>
+
+<script>
+// create product array
+console.log("9)get the stock price");
+let products = [
+  {name:"Laptop", price:50000, stock:5},
+  {name:"Mobile", price:20000, stock:0},
+  {name:"Headset", price:2000, stock:10}
+];
+
+let inStock = products.filter(p => p.stock > 0);
+
+let total = 0;
+inStock.forEach(p => {
+  total += p.price * p.stock;
+});
+
+console.log("Total value:", total);
+let ul = document.getElementById("list");
+inStock.forEach(p => {
+  let li = document.createElement("li");
+  li.innerText = p.name + " - " + p.price;
+  ul.appendChild(li);
+});
+</script>
+
+</body>
+</html>
