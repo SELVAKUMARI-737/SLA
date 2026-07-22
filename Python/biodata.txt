@@ -1,0 +1,14 @@
+BIO DATA
+Name : Selvakumari K
+Age : 21
+Gender : Female
+Date of Birth : 10-08-2005
+Phone : 9876543210
+Email : selvakumari@gmail.com
+Address : Chennai
+Degree : B.Tech
+Course : AI & Data Science
+College : Gnanamani College of Technology
+CGPA : 8.5
+Domain : Web Development
+Skills : Python, Java, MERN Stack

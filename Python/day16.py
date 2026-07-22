@@ -1,0 +1,20 @@
+
+file = open("biodata.txt", "w")
+file.write("BIO DATA\n")
+file.write("Name : Selvakumari K\n")
+file.write("Age : 21\n")
+file.write("Gender : Female\n")
+file.write("Date of Birth : 10-08-2005\n")
+file.write("Phone : 9876543210\n")
+file.write("Email : selvakumari@gmail.com\n")
+file.write("Address : Chennai\n")
+file.write("Degree : B.Tech\n")
+file.write("Course : AI & Data Science\n")
+file.write("College : Gnanamani College of Technology\n")
+file.write("CGPA : 8.5\n")
+file.write("Domain : Web Development\n")
+file.write("Skills : Python, Java, MERN Stack\n")
+
+file.close()
+
+print("Bio data saved successfully.")

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Practice</title>
+  <style>
+    #box {
+      width: 150px;
+      height: 100px;
+      background: lightgray;
+      text-align: center;
+      line-height: 100px;
+      margin: 10px 0;
+    }
+
+    #card {
+      width: 150px;
+      padding: 20px;
+      border: 1px solid black;
+      text-align: center;
+      margin: 10px 0;
+    }
+    #photo{
+        width: 500px;
+        height: 720px;
+    }
+  </style>
+</head>
+<body>
+
+//Task 1
+<h2 id="head">Welcome</h2>
+<button onclick="changeText()">Change Text</button>
+
+<!-- Task 2 -->
+<div id="box" onclick="changeColor()">Color Box</div>
+
+<!-- Task 3 -->
+<img id="photo" src="https://tse1.mm.bing.net/th/id/OIP.4eQEtI9t-o_MQZxrC_F3SgHaEU?w=6668&h=3890&rs=1&pid=ImgDetMain&o=7&rm=3">
+<br>
+<button onclick="changeImage()">Change Image</button>
+
+<!-- Task 4 -->
+<p id="text">This is a secret message.</p>
+<button onclick="hideText()">Hide</button>
+<button onclick="showText()">Show</button>
+
+<!-- Task 5 -->
+<ul id="list">
+  <li>Apple</li>
+  <li>Orange</li>
+</ul>
+<button onclick="addItem()">Add Mango</button>
+
+<!-- Task 6 -->
+<div id="card">Hover Me!</div>
+
+<!-- Task 7 -->
+<input type="text" id="inputBox">
+<button onclick="showInput()">Show Input</button>
+<p id="output"></p>
+
+<!-- Task 8 -->
+<button onclick="countClick()">Click Me</button>
+<p id="count">0</p>
+
+<!-- Task 9 -->
+<button onclick="addPara()">Add Paragraph</button>
+
+<!-- Task 10 -->
+<button onclick="toggleBg()">Toggle Background</button>
+
+<script>
+
+// Task 1
+function changeText() {
+  document.getElementById("head").innerText = "Hello Students!";
+}
+
+// Task 2
+function changeColor() {
+  let box = document.getElementById("box");
+  box.style.backgroundColor = "yellow";
+  box.style.color = "red";
+}
+
+// Task 3
+function changeImage() {
+  document.getElementById("photo").src = "https://tse4.mm.bing.net/th/id/OIP.zUInnqjNyqi6dCqKLJXS2wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3";
+}
+
+// Task 4
+function hideText() {
+  document.getElementById("text").style.display = "none";
+}
+function showText() {
+  document.getElementById("text").style.display = "block";
+}
+
+// Task 5
+function addItem() {
+  let li = document.createElement("li");
+  li.innerText = "Mango";
+  document.getElementById("list").appendChild(li);
+}
+
+// Task 6
+let card = document.getElementById("card");
+
+card.onmouseover = function() {
+  card.style.backgroundColor = "green";
+};
+
+card.onmouseout = function() {
+  card.style.backgroundColor = "white";
+};
+
+// Task 7
+function showInput() {
+  let val = document.getElementById("inputBox").value;
+  document.getElementById("output").innerText = val;
+}
+
+// Task 8
+let count = 0;
+function countClick() {
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+// Task 9
+function addPara() {
+  let p = document.createElement("p");
+  p.innerText = "New paragraph added!";
+  document.body.appendChild(p);
+}
+
+// Task 10
+let toggle = false;
+function toggleBg() {
+  if (toggle) {
+    document.body.style.backgroundColor = "white";
+  } else {
+    document.body.style.backgroundColor = "blue";
+  }
+  toggle = !toggle;
+}
+
+</script>
+
+</body>
+</html>
